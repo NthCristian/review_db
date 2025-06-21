@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+.form-container {
+    @apply w-full flex flex-col items-center;
+
+    * {
+        @apply w-fit;
+    }
+
+    h1 {
+        @apply text-2xl mb-4;
+    }
+
+    form {
+        @apply space-y-2 min-w-[220px] text-left;
+
+        & > div {
+            @apply space-y-1 w-full;
+
+            & > * {
+                @apply block;
+            }
+
+            label {
+                @apply font-light w-full;
+            }
+
+            input,
+            textarea {
+                @apply text-sm px-2 py-1 rounded-sm outline-gray-500 outline focus:outline-2 w-full;
+            }
+        }
+
+        & > div:last-child {
+            @apply mt-4 w-full;
+        }
+
+        span {
+            @apply text-sm font-light text-red-500 block wrap-normal;
+        }
+
+        button {
+            @apply rounded-md bg-blue-400 px-4 py-1 text-sm outline-black/25 outline cursor-pointer hover:outline-2 text-white active:scale-95 active:bg-blue-500;
+        }
+    }
+}
